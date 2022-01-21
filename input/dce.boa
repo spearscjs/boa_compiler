@@ -1,0 +1,24 @@
+(def example1 () : Bool
+    (if (if (> 100 0) false true) false true)
+)
+
+(def example2 () : Bool 
+    (while (< 7 6) (+ 6 4) (let ((x (+ 5 1))) x) 8)
+)
+
+(def example3 () : Num
+    (let ((x (- 5 1))) (+ 4 5) (- 1 2) (let ((x (+ 5 x))) x) x)
+)
+
+(def example4 () : Bool
+    (let ((x 3)) (while (< (+ x 10) 12) true (+ 1 4) (- x 4)) x 4 (print 4) (+ 1 2) true)
+)
+
+(def dce () : Bool
+    (print (example1))
+    (print (example2))
+    (print (example3))
+    (print (example4))
+)
+
+(dce)

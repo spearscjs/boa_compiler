@@ -1,0 +1,4 @@
+(def test (n : Num) : Num 
+    5
+)
+(test 4)

@@ -1,0 +1,24 @@
+(def example1 () : Num
+    (let ((x (< (+ 2 2) 6))) (if x (+ (+ 0 1) 4) (+ 0 0)))
+)
+
+(def example2 () : Num 
+    (let ((x 6)) (while (< (add1 x) 6) (+ 6 4) (let ((x (+ 5 1))) x) 8) (+ x 1))
+)
+
+(def example3 () : Num
+    (let ((x (- 5 1))) (+ 4 5) (- 1 2) (let ((x (+ 5 x))) x) x)
+)
+
+(def example4 () : Bool
+    (let ((x (+ 1 2))) (while (< (+ x (+ 5 5)) 12) true (+ 1 4) (- x 4)) x 4 (+ 1 2) (== x 3))
+)
+
+(def dce () : Bool
+    (print (example1))
+    (print (example2))
+    (print (example3))
+    (print (example4))
+)
+
+(dce)

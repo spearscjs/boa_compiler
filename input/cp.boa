@@ -1,0 +1,20 @@
+(def example1 () : Num 
+    (let ((x (+ 4 6)) (y 19)) (let ((x (+ x y))) x))
+)
+
+(def example2 () : Bool
+    (let ((x 4)) (while (< x 1) x))
+)
+
+(def example3 () : Num
+    (let ((x 4)) (while (< x 1) (set x (- x 1))) x)
+)
+
+(def cp (i : Num) : Num
+    (print (example1))
+    (print (example2))
+    (print (example3))
+    i
+)
+
+(cp input)
